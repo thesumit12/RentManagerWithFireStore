@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_marginStart="4dp"
+    android:layout_marginEnd="4dp"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:text="Rent History"
+        android:id="@+id/history_title"
+        android:textSize="26sp"
+        android:textStyle="bold"/>
+
+    <TextView
+        android:id="@+id/tv_rr_roomNo"
+        style="@style/recycler_heading_text_view"
+        android:text="Room No"
+        app:layout_constraintEnd_toStartOf="@+id/tv_rr_month"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/history_title"/>
+
+    <TextView
+        android:id="@+id/tv_rr_month"
+        style="@style/recycler_heading_text_view"
+        android:text="Month"
+        app:layout_constraintEnd_toStartOf="@+id/tv_rr_rent_paid"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/tv_rr_roomNo"
+        app:layout_constraintTop_toBottomOf="@id/history_title"/>
+
+    <TextView
+        android:id="@+id/tv_rr_rent_paid"
+        style="@style/recycler_heading_text_view"
+        android:text="Rent Paid"
+        app:layout_constraintEnd_toStartOf="@+id/tv_rr_balance"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/tv_rr_month"
+        app:layout_constraintTop_toBottomOf="@id/history_title"/>
+
+    <TextView
+        android:id="@+id/tv_rr_balance"
+        style="@style/recycler_heading_text_view"
+        android:text="Balance"
+        app:layout_constraintEnd_toStartOf="@+id/tv_rr_time_stamp"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/tv_rr_rent_paid"
+        app:layout_constraintTop_toBottomOf="@id/history_title"/>
+
+
+    <TextView
+        android:id="@+id/tv_rr_time_stamp"
+        style="@style/recycler_heading_text_view"
+        android:text="Time"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/tv_rr_balance"
+        app:layout_constraintTop_toBottomOf="@id/history_title"/>
+
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/rent_history_recycler_view"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_margin="8dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tv_rr_roomNo"
+        app:layout_constraintBottom_toBottomOf="parent">
+
+    </android.support.v7.widget.RecyclerView>
+
+
+</android.support.constraint.ConstraintLayout>

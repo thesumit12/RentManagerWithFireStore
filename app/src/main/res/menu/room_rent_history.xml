@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item android:id="@+id/edit_details"
+        android:title="Edit Details"/>
+    <item android:id="@+id/room_details"
+        android:title="Get Room Details"/>
+    <item android:id="@+id/room_rent_history"
+        android:title="Room Rent History"/>
+
+</menu>

@@ -1,0 +1,208 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:fillViewport="true">
+
+    <android.support.constraint.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingStart="8dp"
+        android:paddingEnd="8dp"
+        tools:context="com.example.sumitlakra.rentmanager.ui.addRoomProfile.RoomProfileActivity">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Room Profile"
+            android:textSize="26sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:layout_marginTop="8dp"
+            android:id="@+id/rf_heading"/>
+
+        <android.support.design.widget.TextInputLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@+id/rf_heading"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp"
+            android:background="@android:drawable/editbox_background"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginTop="8dp"
+            android:id="@+id/til_roomNo">
+
+            <EditText
+                style="@style/rf_editText"
+                android:hint="Room No"
+                android:inputType="number"
+                android:id="@+id/rf_et_room_no"/>
+
+        </android.support.design.widget.TextInputLayout>
+
+        <android.support.design.widget.TextInputLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@id/til_roomNo"
+            app:layout_constraintStart_toStartOf="@id/til_roomNo"
+            app:layout_constraintEnd_toEndOf="@id/til_roomNo"
+            android:background="@android:drawable/editbox_background"
+            android:id="@+id/til_name">
+
+            <EditText
+                style="@style/rf_editText"
+                android:hint="Name"
+                android:inputType="text"
+                android:id="@+id/rf_et_name" />
+
+        </android.support.design.widget.TextInputLayout>
+
+        <android.support.design.widget.TextInputLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@id/til_name"
+            app:layout_constraintStart_toStartOf="@id/til_name"
+            app:layout_constraintEnd_toEndOf="@id/til_name"
+            android:background="@android:drawable/editbox_background"
+            android:id="@+id/til_age">
+
+            <EditText
+                style="@style/rf_editText"
+                android:hint="Age"
+                android:inputType="number"
+                android:id="@+id/rf_et_age" />
+
+        </android.support.design.widget.TextInputLayout>
+
+        <android.support.design.widget.TextInputLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@id/til_age"
+            app:layout_constraintStart_toStartOf="@id/til_age"
+            app:layout_constraintEnd_toEndOf="@id/til_age"
+            android:background="@android:drawable/editbox_background"
+            android:id="@+id/til_total_members">
+
+            <EditText
+                style="@style/rf_editText"
+                android:hint="Total Members"
+                android:inputType="number"
+                android:id="@+id/rf_et_total_members" />
+
+        </android.support.design.widget.TextInputLayout>
+
+        <android.support.design.widget.TextInputLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@id/til_total_members"
+            app:layout_constraintStart_toStartOf="@id/til_total_members"
+            app:layout_constraintEnd_toEndOf="@id/til_total_members"
+            android:background="@android:drawable/editbox_background"
+            android:id="@+id/til_adults">
+
+            <EditText
+                style="@style/rf_editText"
+                android:hint="Number of Adults"
+                android:inputType="number"
+                android:id="@+id/rf_et_adults" />
+
+        </android.support.design.widget.TextInputLayout>
+
+        <Spinner
+            android:layout_width="0dp"
+            android:layout_height="64dp"
+            app:layout_constraintEnd_toEndOf="@id/til_adults"
+            app:layout_constraintStart_toStartOf="@id/til_adults"
+            app:layout_constraintTop_toBottomOf="@id/til_adults"
+            android:background="@android:drawable/editbox_background"
+            android:id="@+id/month_spinner">
+
+        </Spinner>
+
+        <android.support.design.widget.TextInputLayout
+            android:id="@+id/til_base_rent"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintEnd_toEndOf="@id/til_adults"
+            app:layout_constraintStart_toStartOf="@id/til_adults"
+            android:background="@android:drawable/editbox_background"
+            app:layout_constraintTop_toBottomOf="@id/month_spinner">
+
+            <EditText
+                android:id="@+id/rf_et_base_rent"
+                style="@style/rf_editText"
+                android:hint="Room Rent"
+                android:inputType="number" />
+
+        </android.support.design.widget.TextInputLayout>
+
+        <android.support.design.widget.TextInputLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@id/til_base_rent"
+            app:layout_constraintStart_toStartOf="@id/til_base_rent"
+            app:layout_constraintEnd_toEndOf="@id/til_base_rent"
+            android:background="@android:drawable/editbox_background"
+            android:id="@+id/til_last_reading">
+
+            <EditText
+                style="@style/rf_editText"
+                android:hint="Room Last Reading"
+                android:inputType="number"
+                android:id="@+id/rf_et_last_reading" />
+
+        </android.support.design.widget.TextInputLayout>
+
+        <android.support.design.widget.TextInputLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@id/til_last_reading"
+            app:layout_constraintStart_toStartOf="@id/til_last_reading"
+            app:layout_constraintEnd_toEndOf="@id/til_last_reading"
+            android:background="@android:drawable/editbox_background"
+            android:id="@+id/til_main_meter_reading">
+
+            <EditText
+                style="@style/rf_editText"
+                android:hint="Main Meter Last Reading"
+                android:inputType="number"
+                android:id="@+id/rf_et_main_meter_reading" />
+
+        </android.support.design.widget.TextInputLayout>
+
+        <android.support.design.widget.TextInputLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@id/til_main_meter_reading"
+            app:layout_constraintStart_toStartOf="@id/til_main_meter_reading"
+            app:layout_constraintEnd_toEndOf="@id/til_main_meter_reading"
+            android:background="@android:drawable/editbox_background"
+            android:id="@+id/til_rent_due">
+
+            <EditText
+                style="@style/rf_editText"
+                android:hint="Rent Due"
+                android:inputType="number"
+                android:id="@+id/rf_et_rent_due" />
+
+        </android.support.design.widget.TextInputLayout>
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/til_rent_due"
+            android:text="Add Room"
+            android:id="@+id/rf_btn_add"
+            android:layout_marginBottom="8dp"/>
+
+    </android.support.constraint.ConstraintLayout>
+
+</ScrollView>
