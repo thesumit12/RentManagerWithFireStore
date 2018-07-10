@@ -123,4 +123,9 @@ public class AppDataManger implements DataManager {
     public Room getEditRoomDetails(String roomNo) {
         return mDbHelper.getEditRoomDetails(roomNo);
     }
+
+    @Override
+    public List<Room> getAllDetails(String roomNo, String month) {
+        return mDbHelper.getAllDetails(roomNo, month);
+    }
 }

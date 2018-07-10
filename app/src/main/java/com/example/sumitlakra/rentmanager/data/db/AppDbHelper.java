@@ -59,6 +59,8 @@ public class AppDbHelper implements DbHelper {
         room.setComments(newRoom.getComments());
         room.setMonth(newRoom.getMonth());
         room.setStartMonth(newRoom.getStartMonth());
+        room.setTempRoomReading(newRoom.getTempRoomReading());
+        room.setTempMainMeterReading(newRoom.getTempMainMeterReading());
         return mDaoSession.getRoomDao().insertOrReplace(room);
     }
 
@@ -67,6 +69,12 @@ public class AppDbHelper implements DbHelper {
         List<Room> roomList = mDaoSession.queryBuilder(Room.class)
                 .where(RoomDao.Properties.RoomNumber.eq(roomNo)).list();
         return roomList.get(0);
+    }
+
+    @Override
+    public List<Room> getAllDetails(String roomNo, String month) {
+        return mDaoSession.queryBuilder(Room.class).where(RoomDao.Properties.RoomNumber.eq(roomNo),
+                RoomDao.Properties.Month.eq(month)).list();
     }
 
     @Override

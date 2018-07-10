@@ -53,4 +53,6 @@ public interface DbHelper {
     Long saveNewDetails(Room room);
 
     Room getEditRoomDetails(String roomNo);
+
+    List<Room> getAllDetails(String roomNo, String month);
 }
