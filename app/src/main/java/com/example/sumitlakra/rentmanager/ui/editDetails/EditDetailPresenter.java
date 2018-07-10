@@ -34,11 +34,19 @@ public class EditDetailPresenter<V extends EditDetailsMvpView> extends
             getMvpView().setMainMeterReadingError();
         else if (TextUtils.isEmpty(rentDue))
             getMvpView().setRentDueError();
-        else
-            getDataManager().saveNewDetails(new Room("Room "+roomNo,name,Integer.valueOf(age),
+        else{
+            getDataManager().saveNewDetails(new Room(roomNo,name,Integer.valueOf(age),
                     Integer.valueOf(totalMembers),Integer.valueOf(adults),Integer.valueOf(baseRent),
                     Integer.valueOf(roomReading),Integer.valueOf(mainMeterReading),Integer.valueOf(rentDue)));
-            //add room
+            getMvpView().finishActivity();
+        }
 
+
+    }
+
+    @Override
+    public void getDetails(String mRoomNo) {
+        Room room = getDataManager().getEditRoomDetails(mRoomNo);
+        getMvpView().setDetailData(room);
     }
 }

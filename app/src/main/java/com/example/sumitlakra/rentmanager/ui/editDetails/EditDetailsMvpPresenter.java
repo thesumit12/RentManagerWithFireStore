@@ -6,4 +6,6 @@ public interface EditDetailsMvpPresenter<V extends EditDetailsMvpView> extends M
 
     void saveDetails(String roomNo, String name, String age, String totalMembers, String adults,
                         String baseRent, String roomReading, String mainMeterReading, String rentDue);
+
+    void getDetails(String mRoomNo);
 }

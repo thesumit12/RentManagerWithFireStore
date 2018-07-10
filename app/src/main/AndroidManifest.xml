@@ -21,7 +21,8 @@
         <activity android:name=".ui.addRoomProfile.RoomProfileActivity" />
         <activity android:name=".ui.roomDetails.RoomDetailActivity" />
         <activity android:name=".ui.rentHistory.RentHistoryActivity" />
-        <activity android:name=".ui.editDetails.EditRoomDetails"></activity>
+        <activity android:name=".ui.editDetails.EditRoomDetailsActivity" />
+        <activity android:name=".ui.showDetails.ShowDetailsActivity"></activity>
     </application>
 
 </manifest>

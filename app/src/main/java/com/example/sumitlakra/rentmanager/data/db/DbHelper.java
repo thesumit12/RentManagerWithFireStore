@@ -51,4 +51,6 @@ public interface DbHelper {
     String getWaterBill(String roomNo, String month);
 
     Long saveNewDetails(Room room);
+
+    Room getEditRoomDetails(String roomNo);
 }

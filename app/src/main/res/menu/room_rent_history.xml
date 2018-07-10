@@ -4,7 +4,7 @@
     <item android:id="@+id/edit_details"
         android:title="Edit Details"/>
     <item android:id="@+id/room_details"
-        android:title="Get Room Details"/>
+        android:title="Show Room Details"/>
     <item android:id="@+id/room_rent_history"
         android:title="Room Rent History"/>
 

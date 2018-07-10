@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.sumitlakra.rentmanager.ui.roomDetails.RoomDetailActivity">
+
+    <TextView
+        android:id="@+id/rd_tv_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="Room 1"
+        android:textSize="26sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/rd_tv_name_left"
+        style="@style/detail_text_view"
+        android:text="Name : "
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/rd_tv_title" />
+
+    <TextView
+        android:id="@+id/rd_tv_name_right"
+        style="@style/detail_text_view"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/rd_tv_member_left"
+        app:layout_constraintTop_toBottomOf="@id/rd_tv_title" />
+
+    <TextView
+        android:id="@+id/rd_tv_member_left"
+        style="@style/detail_text_view"
+        android:text="Total Members : "
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/rd_tv_name_left" />
+
+    <TextView
+        android:id="@+id/rd_tv_member_right"
+        style="@style/detail_text_view"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/rd_tv_member_left"
+        app:layout_constraintTop_toBottomOf="@id/rd_tv_name_right" />
+
+    <TextView
+        android:id="@+id/rd_tv_rent_left"
+        style="@style/detail_text_view"
+        android:text="Rent Due: "
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/rd_tv_member_left" />
+
+    <TextView
+        android:id="@+id/rd_tv_rent_right"
+        style="@style/detail_text_view"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/rd_tv_member_left"
+        app:layout_constraintTop_toBottomOf="@id/rd_tv_member_right" />
+
+    <TextView
+        android:id="@+id/rd_tv_month"
+        style="@style/detail_text_view"
+        android:text="Month: "
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/rd_tv_rent_left" />
+
+    <TextView
+        android:id="@+id/rd_tv_month_right"
+        style="@style/detail_text_view"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/rd_tv_member_left"
+        app:layout_constraintTop_toBottomOf="@id/rd_tv_rent_right" />
+
+    <TextView
+        android:id="@+id/rd_tv_room_reading_left"
+        style="@style/detail_text_view"
+        android:text="Room Reading: "
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/rd_tv_month" />
+
+    <TextView
+        android:id="@+id/rd_tv_room_reading_right"
+        style="@style/detail_text_view"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/rd_tv_member_left"
+        app:layout_constraintTop_toBottomOf="@id/rd_tv_month" />
+
+    <TextView
+        android:id="@+id/sd_tv_meter_reading_left"
+        style="@style/detail_text_view"
+        android:text="Meter Reading"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/rd_tv_room_reading_left"/>
+
+    <TextView
+        android:id="@+id/sd_tv_meter_reading_right"
+        style="@style/detail_text_view"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/rd_tv_member_left"
+        app:layout_constraintTop_toBottomOf="@id/rd_tv_room_reading_right" />
+
+    <TextView
+        android:id="@+id/sd_tv_room_temp_reading_left"
+        style="@style/detail_text_view"
+        android:text="current RR"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/sd_tv_meter_reading_left"/>
+
+    <TextView
+        android:id="@+id/sd_tv_room_temp_reading_right"
+        style="@style/detail_text_view"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/rd_tv_member_left"
+        app:layout_constraintTop_toBottomOf="@id/sd_tv_meter_reading_right" />
+
+    <TextView
+        android:id="@+id/sd_tv_meter_temp_reading_left"
+        style="@style/detail_text_view"
+        android:text="Current MR"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/sd_tv_room_temp_reading_left"/>
+
+    <TextView
+        android:id="@+id/sd_tv_meter_temp_reading_right"
+        style="@style/detail_text_view"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/rd_tv_member_left"
+        app:layout_constraintTop_toBottomOf="@id/sd_tv_room_temp_reading_right" />
+
+    <EditText
+        android:id="@+id/rd_ed_comments"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="8dp"
+        android:background="@android:drawable/editbox_background"
+        android:gravity="top|start"
+        android:hint="Comments"
+        android:inputType="text|textMultiLine"
+        android:textSize="22sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/sd_tv_meter_temp_reading_left" />
+
+
+
+
+</android.support.constraint.ConstraintLayout>

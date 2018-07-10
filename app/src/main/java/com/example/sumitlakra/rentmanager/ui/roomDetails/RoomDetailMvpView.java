@@ -18,4 +18,6 @@ public interface RoomDetailMvpView extends MvpView {
     void navigateToRentHistory();
 
     void showRentDetailsDialog();
+
+    void navigateToShowDetailsActivity(String roomNo, String month);
 }

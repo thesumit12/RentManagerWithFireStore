@@ -51,7 +51,22 @@ public class AppDbHelper implements DbHelper {
 
     @Override
     public Long saveNewDetails(Room room) {
+        List<Room> roomList = mDaoSession.queryBuilder(Room.class)
+                .where(RoomDao.Properties.RoomNumber.eq(room.getRoomNumber())).list();
+        Room newRoom = roomList.get(0);
+        room.setImageId(newRoom.getImageId());
+        room.setTotalRent(newRoom.getTotalRent());
+        room.setComments(newRoom.getComments());
+        room.setMonth(newRoom.getMonth());
+        room.setStartMonth(newRoom.getStartMonth());
         return mDaoSession.getRoomDao().insertOrReplace(room);
+    }
+
+    @Override
+    public Room getEditRoomDetails(String roomNo) {
+        List<Room> roomList = mDaoSession.queryBuilder(Room.class)
+                .where(RoomDao.Properties.RoomNumber.eq(roomNo)).list();
+        return roomList.get(0);
     }
 
     @Override

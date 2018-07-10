@@ -24,7 +24,6 @@ public class RoomDetailPresenter<V extends RoomDetailMvpView> extends BasePresen
 
     @Override
     public void getRoomDetails(String roomNo, String month) {
-        //TODO : get details from rent transaction
         List<Room> roomList = getDataManager().getRoomDetails(roomNo, month+" "+getYear());
         if (roomList.size() > 0){
             if (roomList.get(0).getName() != null)
@@ -151,5 +150,13 @@ public class RoomDetailPresenter<V extends RoomDetailMvpView> extends BasePresen
     @Override
     public void showRentDetails() {
         getMvpView().showRentDetailsDialog();
+    }
+
+    @Override
+    public void roomDetailsClicked(String roomNo, String month) {
+        if (getDataManager().checkRoomExists(roomNo, month+" "+getYear()))
+            getMvpView().navigateToShowDetailsActivity(roomNo, month+" "+getYear());
+        else
+            getMvpView().showMessage("Details available from "+startMonth);
     }
 }

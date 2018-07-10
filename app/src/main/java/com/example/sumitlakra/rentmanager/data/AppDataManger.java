@@ -118,4 +118,9 @@ public class AppDataManger implements DataManager {
     public Long saveNewDetails(Room room) {
         return mDbHelper.saveNewDetails(room);
     }
+
+    @Override
+    public Room getEditRoomDetails(String roomNo) {
+        return mDbHelper.getEditRoomDetails(roomNo);
+    }
 }

@@ -17,10 +17,12 @@ import android.widget.TextView;
 
 import com.example.sumitlakra.rentmanager.R;
 import com.example.sumitlakra.rentmanager.ui.base.BaseActivity;
+import com.example.sumitlakra.rentmanager.ui.editDetails.EditRoomDetailsActivity;
 import com.example.sumitlakra.rentmanager.ui.rentHistory.RentHistoryActivity;
 import com.example.sumitlakra.rentmanager.ui.roomDetails.payRentDialog.PayRentDialog;
 import com.example.sumitlakra.rentmanager.ui.roomDetails.readingDialog.ReadingDialog;
 import com.example.sumitlakra.rentmanager.ui.roomDetails.rentDetail.RentDetailDialog;
+import com.example.sumitlakra.rentmanager.ui.showDetails.ShowDetailsActivity;
 
 import android.widget.AdapterView.OnItemSelectedListener;
 
@@ -114,11 +116,17 @@ public class RoomDetailActivity extends BaseActivity implements RoomDetailMvpVie
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
         switch (item.getItemId()){
+            case R.id.edit_details:
+                Intent intent = new Intent(RoomDetailActivity.this, EditRoomDetailsActivity.class);
+                intent.putExtra("ROOMNO", mTitle);
+                startActivity(intent);
+                return true;
             case R.id.room_rent_history:
                 mPresenter.roomRentHistoryClicked();
                 return true;
             case R.id.room_details:
-                mPresenter.getRoomDetails(mTitle, month);
+                mPresenter.roomDetailsClicked(mTitle, month);
+                return true;
             default:
                 return super.onOptionsItemSelected(item);
         }
@@ -188,6 +196,14 @@ public class RoomDetailActivity extends BaseActivity implements RoomDetailMvpVie
         fragment.show(getSupportFragmentManager(), "RentDetailDialog");
     }
 
+    @Override
+    public void navigateToShowDetailsActivity(String roomNo, String mMonth) {
+        Intent intent1 = new Intent(RoomDetailActivity.this, ShowDetailsActivity.class);
+        intent1.putExtra("ROOMNO", roomNo);
+        intent1.putExtra("MONTH",mMonth);
+        startActivity(intent1);
+    }
+
     public void updateRentStatus(String balance, String message){
         rent.setText(balance);
         dueOn.setText(message);
@@ -208,7 +224,6 @@ public class RoomDetailActivity extends BaseActivity implements RoomDetailMvpVie
 
     @Override
     public void onNothingSelected(AdapterView<?> parent) {
-
     }
 
     @Override

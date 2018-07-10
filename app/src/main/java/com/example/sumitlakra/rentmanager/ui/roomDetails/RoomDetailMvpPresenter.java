@@ -18,4 +18,6 @@ public interface RoomDetailMvpPresenter<V extends MvpView> extends MvpPresenter<
     void roomRentHistoryClicked();
 
     void showRentDetails();
+
+    void roomDetailsClicked(String roomNo, String month);
 }
