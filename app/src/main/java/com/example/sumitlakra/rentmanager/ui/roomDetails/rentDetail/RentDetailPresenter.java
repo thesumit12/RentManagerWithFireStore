@@ -39,4 +39,13 @@ public class RentDetailPresenter<V extends RentDetailMvpView> extends BasePresen
         getMvpView().setDialogTitle(mTitle+" "+month+" "+getYear());
     }
 
+    @Override
+    public void getBalance(String roomNo, int monthPosition) {
+        int balance = getDataManager().getBalance(roomNo, getPreviousMonth(monthPosition)+" "+getYear());
+        if (balance == 9999)
+            getMvpView().setBalance("--");
+        else
+            getMvpView().setBalance(String.valueOf(balance));
+    }
+
 }

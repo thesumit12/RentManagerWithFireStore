@@ -9,4 +9,6 @@ public interface RentDetailMvpPresenter<V extends RentDetailMvpView> extends Mvp
     void getElectricityBill(String roomNo, String month);
 
     void setTitle(String mTitle, String month);
+
+    void getBalance(String roomNo, int monthPosition);
 }

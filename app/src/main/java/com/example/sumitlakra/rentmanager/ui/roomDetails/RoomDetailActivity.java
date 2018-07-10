@@ -192,7 +192,7 @@ public class RoomDetailActivity extends BaseActivity implements RoomDetailMvpVie
 
     @Override
     public void showRentDetailsDialog() {
-        DialogFragment fragment = RentDetailDialog.newInstance(mTitle, month);
+        DialogFragment fragment = RentDetailDialog.newInstance(mTitle, month, monthPosition);
         fragment.show(getSupportFragmentManager(), "RentDetailDialog");
     }
 

@@ -8,4 +8,6 @@ public interface RentDetailMvpView extends MvpView {
     void setElectricityBill(String electricityBill);
 
     void setDialogTitle(String dialogTitle);
+
+    void setBalance(String balance);
 }

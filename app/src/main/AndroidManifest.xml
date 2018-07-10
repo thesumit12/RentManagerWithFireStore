@@ -22,7 +22,7 @@
         <activity android:name=".ui.roomDetails.RoomDetailActivity" />
         <activity android:name=".ui.rentHistory.RentHistoryActivity" />
         <activity android:name=".ui.editDetails.EditRoomDetailsActivity" />
-        <activity android:name=".ui.showDetails.ShowDetailsActivity"></activity>
+        <activity android:name=".ui.showDetails.ShowDetailsActivity"/>
     </application>
 
 </manifest>
