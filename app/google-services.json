@@ -1,0 +1,42 @@
+{
+  "project_info": {
+    "project_number": "654520845950",
+    "firebase_url": "https://rentmanager-1eb3c.firebaseio.com",
+    "project_id": "rentmanager-1eb3c",
+    "storage_bucket": "rentmanager-1eb3c.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:654520845950:android:cd25daa2ded989da",
+        "android_client_info": {
+          "package_name": "com.example.sumitlakra.rentmanager"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "654520845950-rvjhfuk1nj63ri27te8fotgh4m0g6rc5.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCY95ysEqMtfXRvsKKSuzEm2qcfljru8oM"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

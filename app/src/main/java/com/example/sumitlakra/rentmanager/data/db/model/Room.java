@@ -61,6 +61,9 @@ public class Room {
     @Property(nameInDb = "startMonth")
     private String startMonth;
 
+    @Property
+    private int roomNoInt;
+
     public Room(int imageId, String roomNumber){
         this.imageId = imageId;
         this.roomNumber = roomNumber;
@@ -69,7 +72,7 @@ public class Room {
     public Room(int imageId,String roomNumber, String name, int age,
                 int totalMembers, int adults, int roomRent, int lastReading,
                 int mainMeterReading, int rentDue, int totalRent, String comments, String month,
-                String startMonth) {
+                String startMonth, int roomNoInt) {
         this.imageId = imageId;
         this.roomNumber = roomNumber;
         this.name = name;
@@ -84,6 +87,7 @@ public class Room {
         this.comments = comments;
         this.month = month;
         this.startMonth = startMonth;
+        this.roomNoInt = roomNoInt;
     }
 
     public Room(String roomNumber, String name, int age,
@@ -107,11 +111,11 @@ public class Room {
         this.rentDue = rentDue;
     }
 
-    @Generated(hash = 88861301)
+    @Generated(hash = 1487817844)
     public Room(Long id, int imageId, String roomNumber, String name, int age, int totalMembers,
             int adults, int roomRent, int roomReading, int mainMeterReading, int rentDue, int totalRent,
             String comments, String month, int tempMainMeterReading, int tempRoomReading,
-            String startMonth) {
+            String startMonth, int roomNoInt) {
         this.id = id;
         this.imageId = imageId;
         this.roomNumber = roomNumber;
@@ -129,6 +133,7 @@ public class Room {
         this.tempMainMeterReading = tempMainMeterReading;
         this.tempRoomReading = tempRoomReading;
         this.startMonth = startMonth;
+        this.roomNoInt = roomNoInt;
     }
 
     @Generated(hash = 703125385)
@@ -281,5 +286,13 @@ public class Room {
 
     public void setStartMonth(String startMonth) {
         this.startMonth = startMonth;
+    }
+
+    public int getRoomNoInt() {
+        return this.roomNoInt;
+    }
+
+    public void setRoomNoInt(int roomNoInt) {
+        this.roomNoInt = roomNoInt;
     }
 }

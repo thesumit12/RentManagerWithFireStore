@@ -35,7 +35,7 @@ public class AppDbHelper implements DbHelper {
 
     @Override
     public List<Room> getRoomList() {
-        return mDaoSession.getRoomDao().queryBuilder().orderAsc(RoomDao.Properties.RoomNumber).list();
+        return mDaoSession.getRoomDao().queryBuilder().orderAsc(RoomDao.Properties.RoomNoInt).list();
     }
 
     @Override
@@ -55,6 +55,7 @@ public class AppDbHelper implements DbHelper {
                 .where(RoomDao.Properties.RoomNumber.eq(room.getRoomNumber())).list();
         Room newRoom = roomList.get(0);
         room.setImageId(newRoom.getImageId());
+        room.setRoomNoInt(newRoom.getRoomNoInt());
         room.setTotalRent(newRoom.getTotalRent());
         room.setComments(newRoom.getComments());
         room.setMonth(newRoom.getMonth());

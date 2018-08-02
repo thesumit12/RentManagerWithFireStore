@@ -53,7 +53,7 @@ public class RoomProfilePresenter<V extends RoomProfileMvpView> extends BasePres
                         Integer.valueOf(age), Integer.valueOf(totalMembers), Integer.valueOf(adults),
                         Integer.valueOf(baseRent), Integer.valueOf(roomReading), Integer.valueOf(mainMeterReading),
                         Integer.valueOf(rentDue), 0, null,
-                        month+" "+getYear(), month+" "+getYear()));
+                        month+" "+getYear(), month+" "+getYear(),Integer.valueOf(roomNo)));
             } catch (SQLiteConstraintException e) {
                 e.printStackTrace();
                 getMvpView().showMessage("Error Room No can't be same!!");
